@@ -11,8 +11,12 @@
     "lint": "eslint . --ext .js"
   },
   "dependencies": {
-    "expo": "~45.0.0",
+    "@expo-google-fonts/lato": "^0.2.2",
+    "@expo-google-fonts/oswald": "^0.2.2",
+    "expo": "^45.0.6",
+    "expo-font": "~10.1.0",
     "expo-status-bar": "~1.3.0",
+    "install": "^0.13.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
