@@ -33,10 +33,6 @@ export const LocationContextProvider = ({ children }) => {
       });
   }, [keyword]);
 
-  useEffect(() => {
-    onSearch();
-  }, []);
-
   return (
     <LocationContext.Provider
       value={{
