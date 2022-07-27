@@ -31,7 +31,7 @@ export const LocationContextProvider = ({ children }) => {
         setIsLoading(false);
         setError(err);
       });
-    }, [keyword]);
+  }, [keyword]);
 
   useEffect(() => {
     onSearch();
