@@ -1,5 +1,5 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import * as firebase from "firebase";
 
@@ -31,21 +31,6 @@ if (!firebase.apps.length) {
 }
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword("mo@binni.io", "test123")
-        .then((user) => {
-          setIsAuthenticated(true);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    }, 2000);
-  }, []);
-
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
@@ -57,8 +42,6 @@ export default function App() {
   if (!oswaldLoaded || !latoLoaded) {
     return null;
   }
-
-  if (!isAuthenticated) return null;
 
   return (
     <>
