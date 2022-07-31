@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Camera } from "expo-camera";
+import { Camera, CameraType } from "expo-camera";
 import styled from "styled-components/native";
 import { View } from "react-native";
 import { Text } from "../../../components/typography/text.component";
@@ -28,8 +28,8 @@ export const CameraScreen = () => {
   }
   return (
     <ProfileCamera
-      ref={(camera) => (cameraRef.current = camera)}
-      type={Camera.Constants.Type.front}
+       ref={camera => (cameraRef.current = camera)}
+       type={CameraType.front}
     ></ProfileCamera>
-  );
+ );
 };
